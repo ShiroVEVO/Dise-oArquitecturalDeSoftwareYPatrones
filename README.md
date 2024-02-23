@@ -1,1 +1,1 @@
-# Dise-oArquitecturalDeSoftwareYPatrones
+# Diseño Arquitectural de Software Y Patrones
