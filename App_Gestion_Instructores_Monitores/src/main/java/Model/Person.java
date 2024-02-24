@@ -5,13 +5,13 @@ import java.sql.Date;
 public class Person {
     private int id;
     private String name;
-    private Long phoneNumber;
+    private String phoneNumber;
     private Date birthDate;
     private String address;
     private String email;
     private Role role;
 
-    public Person(int id, String name, Long phoneNumber, Date birthDate, String address, String email, Role role) {
+    public Person(int id, String name, String phoneNumber, Date birthDate, String address, String email, Role role) {
         this.id = id;
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -37,11 +37,11 @@ public class Person {
         this.name = name;
     }
 
-    public Long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

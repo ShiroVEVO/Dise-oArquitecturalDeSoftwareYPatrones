@@ -12,16 +12,16 @@ public class DBConnection {
     private static final String PASS = "Onepiece345";
 
     @SuppressWarnings("deprecation")
-    public void conectar() throws SQLException {
+    public void connect() throws SQLException {
         try {
             Class.forName(DRIVER).newInstance();
             conn = DriverManager.getConnection(URL, USER, PASS);
         } catch (Exception e) {
-            System.out.println("Problema:" + e);
+            System.out.println("Problem:" + e);
         }
     }
 
-    public void desconectar() throws SQLException {
+    public void disconnect() throws SQLException {
         if (conn != null) {
             if (!conn.isClosed()) {
                 conn.close();
