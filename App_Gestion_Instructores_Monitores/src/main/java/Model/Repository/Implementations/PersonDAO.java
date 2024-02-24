@@ -16,6 +16,7 @@ import Model.Repository.Configuration.DBConnection;
 public class PersonDAO implements InterfaceDAO<Person> {
     private DBConnection dbConnection = new DBConnection();
     private PreparedStatement query = null;
+    private RoleDAO roleDAO = new RoleDAO();
     private static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS `example`.`person` (" +
             "`idperson` INT UNSIGNED NOT NULL AUTO_INCREMENT," +
             "`name` VARCHAR(50) NOT NULL," +
@@ -80,7 +81,6 @@ public class PersonDAO implements InterfaceDAO<Person> {
 
     @Override
     public List<Person> readEveryone() throws SQLException { // TESTED
-        RoleDAO roleDAO = new RoleDAO();
         Statement query = null;
         ResultSet results = null;
         List<Person> personList = new ArrayList<>();
@@ -119,7 +119,6 @@ public class PersonDAO implements InterfaceDAO<Person> {
 
     @Override
     public Person readOne(int idPerson) throws SQLException { // TESTED
-        RoleDAO roleDAO = new RoleDAO();
         ResultSet results = null;
         Person person = null;
         try {
